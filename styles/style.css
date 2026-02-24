@@ -89,4 +89,9 @@ h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin
 .sidebar a {
     color: white;
     text-decoration: none;
+
+}
+
+address {
+    font-style: normal;
 }
