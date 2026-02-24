@@ -95,3 +95,10 @@ h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin
 address {
     font-style: normal;
 }
+
+.portfolio-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
