@@ -1,0 +1,23 @@
+table{
+border-collapse: collapse;
+margin: 20px;
+}
+
+td{
+width:60px;
+height:60px;
+text-align:center;
+font-size:40px;
+}
+
+/* світлі клітинки */
+tr:nth-child(even) td:nth-child(odd),
+tr:nth-child(odd) td:nth-child(even){
+background:#bfbfbf;
+}
+
+/* темні клітинки */
+tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd){
+background:#eeeeee;
+}

@@ -1,0 +1,48 @@
+body{
+    padding:40px;
+    background:#eee;
+}
+
+.battery{
+    width:200px;
+    height:60px;
+    border:6px solid black;
+    margin:20px;
+    position:relative;
+}
+
+/* контакт батарейки */
+.battery::after{
+    content:"";
+    position:absolute;
+    right:-16px;
+    top:18px;
+    width:10px;
+    height:20px;
+    background:black;
+}
+
+/* індикатор заряду */
+.battery::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+}
+
+/* рівні заряду */
+.low::before{
+    width:40%;
+    background:red;
+}
+
+.medium::before{
+    width:70%;
+    background:gold;
+}
+
+.full::before{
+    width:100%;
+    background:green;
+}
