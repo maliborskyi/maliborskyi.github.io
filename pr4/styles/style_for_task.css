@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-wrap: wrap;       
+    justify-content: center; 
+    align-content: center; 
+    align-items: center; 
+    gap: 25px;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.circle {
+    width: 320px;           
+    height: 320px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    font-family: "Times New Roman", serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+}
+
+
+/* 1 Спосіб */
+.circle.pseudo {
+    background-color: blue;
+    padding: 75px;
+    z-index: 0;
+}
+
+.circle.pseudo::before {
+    content: "";
+    position: absolute;
+    top: 37.5px;
+    bottom: 37.5px;
+    left: 37.5px;
+    right: 37.5px;
+    background-color: yellow;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle.pseudo::after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    bottom: 75px;
+    left: 75px;
+    right: 75px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+/* 2 Спосіб */
+.circle.box-shadow {
+    background-color: white; 
+    box-shadow: 
+        inset 0 0 0 37.5px blue, 
+        inset 0 0 0 75px yellow;
+}
+
+
+/* 3 Спосіб */
+.circle.gradient {
+    background: radial-gradient(
+        circle, 
+        white 0, white 85px, 
+        yellow 85px, yellow 122.5px, 
+        blue 122.5px, blue 100%
+    );
+}
