@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+.pricing-container {
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.price-table {
+    float: left;
+    width: 270px;
+    margin: 0 15px;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.price-table th, .price-table td {
+    border: none;
+}
+
+.header-price th {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 30px 0 10px 0;
+}
+
+.header-title th {
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+    padding: 8px 0 20px 0;
+}
+
+.first-item td {
+    padding-top: 30px;
+}
+
+.price-table td {
+    padding: 12px 20px;
+    color: #888888;
+    font-size: 14px;
+}
+
+.price-table td strong {
+    color: #555555;
+    font-weight: bold;
+}
+
+.divider-cell {
+    padding: 8px 30px !important;
+}
+
+.divider {
+    border-top: 1px dotted #cccccc;
+    width: 100%;
+}
+
+.action-cell {
+    padding: 15px 0 20px 0 !important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 35px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tiny {
+    border-left: 1px solid #16a085;
+    border-right: 1px solid #16a085;
+    border-bottom: 10px solid #16a085;
+}
+.tiny .header-price th { background-color: #1abc9c; }
+.tiny .header-title th { 
+    background-color: #1abc9c; 
+    border-bottom: 8px solid #16a085; 
+}
+.tiny .btn { background-color: #1abc9c; }
+
+.small {
+    border-left: 1px solid #e67e22;
+    border-right: 1px solid #e67e22;
+    border-bottom: 10px solid #e67e22;
+}
+.small .header-price th { background-color: #f39c12; }
+.small .header-title th { 
+    background-color: #f39c12; 
+    border-bottom: 8px solid #e67e22;
+}
+.small .btn { background-color: #f39c12; }
+
+.medium {
+    border-left: 1px solid #c0392b;
+    border-right: 1px solid #c0392b;
+    border-bottom: 10px solid #c0392b;
+}
+.medium .header-price th { background-color: #e74c3c; }
+.medium .header-title th { 
+    background-color: #e74c3c; 
+    border-bottom: 8px solid #c0392b;
+}
+.medium .btn { background-color: #e74c3c; }
