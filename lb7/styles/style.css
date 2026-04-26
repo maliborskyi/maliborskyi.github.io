@@ -1,0 +1,130 @@
+/* Основні налаштування */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.catalog-container {
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.catalog-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Сітка товарів */
+.product-grid {
+    display: flex;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-card {
+    flex: 1;
+    padding: 50px 20px 20px 20px; 
+    border-right: 1px solid #ddd;
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.product-card:last-child {
+    border-right: none;
+}
+
+/* Категорії та заголовки */
+.category {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0077b6;
+    height: 50px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Ціни */
+.price-block {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.current-price {
+    font-size: 18px;
+}
+
+/* Кнопки */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.buy {
+    background-color: #fdf001; 
+    color: #333;
+}
+
+.buy:hover {
+    background-color: #e6d900;
+}
+
+.coming-soon {
+    background-color: #d13092;
+    color: white;
+}
+
+/* Бейджі */
+.badge {
+    position: absolute;
+    top: -30px; 
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.new { background-color: #7ab51d; }
+.hit { background-color: #008cd2; }
