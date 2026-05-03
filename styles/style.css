@@ -17,9 +17,23 @@ body {
     z-index: 100;
 }
 
-.top-nav ul { list-style: none; margin: 0; padding: 0; }
-.top-nav li { display: inline-block; margin: 0 20px; }
-.top-nav a { color: #ffffff; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+.top-nav ul { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.top-nav li { 
+    display: inline-block;
+     margin: 0 20px; 
+}
+
+.top-nav a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
 
 .container {
     width: 1000px;
@@ -54,12 +68,34 @@ body {
     text-transform: uppercase;
 }
 
-.main-content { flex: 1; padding: 50px; }
-h1 { font-size: 36px; color: #2c3e50; margin: 0; }
-h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-top: 40px; text-transform: uppercase; }
+.main-content { 
+    flex: 1; 
+    padding: 50px; 
+}
+h1 { 
+    font-size: 36px; 
+    color: #2c3e50; 
+    margin: 0; 
+}
 
-.date { float: right; color: #7f8c8d; font-size: 12px; font-weight: bold; }
-.company { color: #3498db; margin: 5px 0; font-weight: bold; }
+h2 { font-size: 20px; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 8px; 
+    margin-top: 40px; 
+    text-transform: uppercase; 
+}
+
+.date { 
+    float: right; 
+    color: #7f8c8d; 
+    font-size: 12px; 
+    font-weight: bold; 
+}
+.company { 
+    color: #3498db; 
+    margin: 5px 0; 
+    font-weight: bold; 
+}
 
 /* Кнопка Портфоліо */
 .portfolio-link-btn {
@@ -72,10 +108,15 @@ h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin
     font-weight: bold;
 }
 
-.portfolio-link-btn:hover { background-color: #29b9b2; }
+.portfolio-link-btn:hover { 
+    background-color: #29b9b2; 
+}
 
 /* Стиль для сторінки структури */
-.code-page-body { background-color: #f0f2f5; padding: 50px; }
+.code-page-body { 
+    background-color: #f0f2f5; 
+    padding: 50px; 
+}
 .code-box {
     background: #2d3436;
     color: #fab1a0;
@@ -89,7 +130,6 @@ h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 8px; margin
 .sidebar a {
     color: white;
     text-decoration: none;
-
 }
 
 address {
@@ -102,3 +142,15 @@ address {
     flex-wrap: wrap;
 }
 
+/* Соціальні мережі */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
