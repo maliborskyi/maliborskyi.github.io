@@ -1,0 +1,228 @@
+/*
+* Background Images - Practice
+* CSS Styles
+*
+*/
+
+/* General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    /* Основний текстурний фон сторінки */
+    background-color: #2b2b2b;
+    background-image: url('../img/texture.png'); 
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 36px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff1243;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #d00b33;
+}
+
+/* Header */
+header {
+    /* Головне фонове зображення концерту */
+    background-image: url('../img/bg-01.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 120px;
+}
+
+#topbar {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu li a {
+    display: block;
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Робимо фон першого пункту меню червоним */
+.menu li:first-child a {
+    background-color: #ff1243;
+}
+
+.menu li a:hover {
+    background-color: #d00b33;
+}
+
+header h1 {
+    font-family: 'Metal Mania', cursive;
+    font-size: 80px;
+    margin: 100px 0 40px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+/* Tour */
+#tour {
+    padding: 80px 0;
+}
+
+.tour-card {
+    display: inline-block;
+    width: 22%;
+    margin: 0 1%;
+    box-sizing: border-box;
+    padding: 120px 20px 30px;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    vertical-align: top;
+}
+
+/* Фонові зображення для міст з темним градієнтом, щоб текст був читабельним */
+.madrid { background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%), url('../img/tour/madrid.jpg'); }
+.turin { background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%), url('../img/tour/turin.jpg'); }
+.hamburg { background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%), url('../img/tour/hamburg.jpg'); }
+.krakow { background-image: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 100%), url('../img/tour/krakow.jpg'); }
+
+.tour-town {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tour-place {
+    font-size: 13px;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.tour-date {
+    font-size: 12px;
+    font-style: italic;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Gallery */
+#gallery {
+    padding: 20px 0 80px;
+}
+
+.photo {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    box-sizing: border-box;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Subscribe */
+#subscribe {
+    /* Фонове зображення з вогниками */
+    background-image: url('../img/bg-02.jpg'); 
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Напівпрозорий шар затемнення над фоновим зображенням */
+#subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#subscribe .container {
+    position: relative;
+    z-index: 1;
+}
+
+.pitch p {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.subscribe-form input {
+    padding: 15px 20px;
+    width: 300px;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+.subscribe-form button {
+    padding: 15px 30px;
+    background-color: #ff1243;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: -5px;
+}
+
+.subscribe-form button:hover {
+    background-color: #d00b33;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social {
+    margin-bottom: 15px;
+}
+
+.social a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social a:hover {
+    color: #ff1243;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #666;
+}
