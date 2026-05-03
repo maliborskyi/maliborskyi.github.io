@@ -86,17 +86,18 @@ header h1 {
     padding: 80px 0;
 }
 
+#tour .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .tour-card {
-    display: inline-block;
     width: 22%;
-    margin: 0 1%;
+    padding: 150px 20px 20px;
     box-sizing: border-box;
-    padding: 120px 20px 30px;
     text-align: left;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    vertical-align: top;
+    background-color: #222;
 }
 
 /* Фонові зображення для міст з темним градієнтом, щоб текст був читабельним */
