@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+}
+
+main {
+    flex: 1; 
+    width: 90%;
+    margin: 40px auto;
+}
+
+header {
+    background-color: #0a4224;
+    padding: 20px 0;
+}
+
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.phone {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+main {
+    width: 90%;
+    margin: 40px auto;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.specialization-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: calc(33.333% - 14px);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-green { background-color: #6cc485; }
+.icon-red { background-color: #ef6a6a; }
+
+footer {
+    background-color: #0a1128;
+    color: #ffffff;
+    padding: 40px 20px;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.footer-center {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+}
+
+.footer-list { list-style: none; }
+.phone-large { font-size: 28px; font-weight: bold; }
+
+.footer-author {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+@media (max-width: 992px) {
+    .card { width: calc(50% - 10px); }
+}
+
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    .card { width: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        position: static;
+    }
+    
+    .footer-center {
+        position: static;
+    }
+}
