@@ -1,0 +1,53 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.3rem;
+}
+
+.task-section {
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+.task-section:last-child {
+    border-bottom: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.output {
+    background-color: #282c34;
+    color: #98c379;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier;
+    font-size: 15px;
+    min-height: 20px;
+}
+
+pre.output {
+    white-space: pre-wrap; 
+}
