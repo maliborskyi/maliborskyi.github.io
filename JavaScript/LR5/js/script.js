@@ -168,51 +168,55 @@ function initPhotoRotator(containerId, imagesArray) {
     const root = document.getElementById(containerId);
     let currentIndex = 0;
 
-    // Створення елементів через document.createElement
-    const frame = document.createElement('div');
-    frame.className = 'rotator-frame';
+    const table = document.createElement('table');
+    table.className = 'rotator-table';
+
+    const tr = document.createElement('tr');
+
+    // Ліва кнопка Назад
+    const tdPrev = document.createElement('td');
+    tdPrev.className = 'rotator-nav';
+    tdPrev.textContent = 'Назад';
+    tdPrev.rowSpan = 3;
+
+    // Центральна колонка 
+    const tdCenter = document.createElement('td');
+    tdCenter.className = 'rotator-center-td';
 
     const topBar = document.createElement('div');
     topBar.className = 'rotator-top';
 
-    const mainArea = document.createElement('div');
-    mainArea.className = 'rotator-main';
-
-    const prevBtn = document.createElement('div');
-    prevBtn.className = 'rotator-nav';
-    prevBtn.textContent = 'Назад';
-
     const imgWrap = document.createElement('div');
     imgWrap.className = 'rotator-img-wrap';
-
     const img = document.createElement('img');
-
-    const nextBtn = document.createElement('div');
-    nextBtn.className = 'rotator-nav';
-    nextBtn.textContent = 'Вперед';
-
     imgWrap.appendChild(img);
-    mainArea.appendChild(prevBtn);
-    mainArea.appendChild(imgWrap);
-    mainArea.appendChild(nextBtn);
 
     const bottomBar = document.createElement('div');
     bottomBar.className = 'rotator-bottom';
 
     const titleEl = document.createElement('div');
     titleEl.className = 'rotator-title';
-
     const descEl = document.createElement('div');
     descEl.className = 'rotator-desc';
 
     bottomBar.appendChild(titleEl);
     bottomBar.appendChild(descEl);
 
-    frame.appendChild(topBar);
-    frame.appendChild(mainArea);
-    frame.appendChild(bottomBar);
+    tdCenter.appendChild(topBar);
+    tdCenter.appendChild(imgWrap);
+    tdCenter.appendChild(bottomBar);
 
-    root.appendChild(frame);
+    const tdNext = document.createElement('td');
+    tdNext.className = 'rotator-nav';
+    tdNext.textContent = 'Вперед';
+    tdNext.rowSpan = 3;
+
+    tr.appendChild(tdPrev);
+    tr.appendChild(tdCenter);
+    tr.appendChild(tdNext);
+    table.appendChild(tr);
+
+    root.appendChild(table);
 
     function update() {
         let currentItem = imagesArray[currentIndex];
@@ -222,28 +226,18 @@ function initPhotoRotator(containerId, imagesArray) {
         titleEl.textContent = currentItem.title;
         descEl.textContent = currentItem.description;
 
-        // Перемикання видимості посилань "Назад" / "Вперед"
-        if (currentIndex === 0) {
-            prevBtn.classList.add('hidden');
-        } else {
-            prevBtn.classList.remove('hidden');
-        }
-
-        if (currentIndex === imagesArray.length - 1) {
-            nextBtn.classList.add('hidden');
-        } else {
-            nextBtn.classList.remove('hidden');
-        }
+        tdPrev.style.visibility = (currentIndex === 0) ? 'hidden' : 'visible';
+        tdNext.style.visibility = (currentIndex === imagesArray.length - 1) ? 'hidden' : 'visible';
     }
 
-    prevBtn.addEventListener('click', function() {
+    tdPrev.addEventListener('click', function() {
         if (currentIndex > 0) {
             currentIndex--;
             update();
         }
     });
 
-    nextBtn.addEventListener('click', function() {
+    tdNext.addEventListener('click', function() {
         if (currentIndex < imagesArray.length - 1) {
             currentIndex++;
             update();
@@ -252,7 +246,6 @@ function initPhotoRotator(containerId, imagesArray) {
 
     update();
 }
-
 
 // Завдання 5
 function initCaptcha(digitsCount) {
