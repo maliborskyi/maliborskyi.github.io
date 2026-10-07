@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №7</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="task-block">
+        <h2>Завдання 1</h2>
+        <div class="converter-container">
+            <div class="input-row">
+                <label for="fahrenheit">Температура за Фаренгейтом</label>
+                <input type="number" id="fahrenheit">
+            </div>
+            <div class="input-row">
+                <label for="celsius">Температура за Цельсієм</label>
+                <input type="number" id="celsius">
+            </div>
+        </div>
+    </div>
+
+    <div class="task-block">
+        <h2>Завдання 2</h2>
+        <div id="quiz1-score" class="score-text">Загальний рахунок 0% (0 правильних відповідей з 0)</div>
+        <button id="quiz1-next-btn">наступне завдання</button>
+        <div class="quiz-row">
+            <span id="quiz1-task" class="task-expr">3 × 4 =</span>
+            <input type="text" id="quiz1-answer" class="quiz-input">
+            <button id="quiz1-check-btn">перевірити</button>
+        </div>
+        <div id="quiz1-result" class="result-msg"></div>
+    </div>
+
+    <div class="task-block">
+        <h2>Завдання 3</h2>
+        <div id="quiz2-score" class="score-text">Загальний рахунок 0% (0 правильних відповідей з 0)</div>
+        <button id="quiz2-next-btn">наступне завдання</button>
+        <div id="quiz2-task" class="task-expr">3 × 4 =</div>
+        <div id="quiz2-options" class="radio-options"></div>
+        <div id="quiz2-result" class="result-msg"></div>
+    </div>
+
+    <div class="task-block">
+        <h2>Завдання 4</h2>
+        <div id="rotator"></div>
+    </div>
+
+    <div class="task-block">
+        <h2>Завдання 5</h2>
+        <div class="captcha-box">
+            <div class="captcha-label">Введіть число</div>
+            <div id="captcha-pixels" class="pixels-frame"></div>
+            <input type="text" id="captcha-input" class="captcha-input">
+            <div id="captcha-result" class="captcha-result"></div>
+            <button id="captcha-check-btn">Перевірити</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
