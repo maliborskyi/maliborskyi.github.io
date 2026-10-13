@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР №6</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <main class="generator">
+        <h1>CSS Generator</h1>
+        <div class="tabs" id="tabs">
+            <button class="tab active" type="button" data-tab="radius">
+                Border Radius
+            </button>
+            <button class="tab" type="button" data-tab="property-2">
+                Margin
+            </button>
+            <button class="tab" type="button" data-tab="property-3">
+                Text-align
+            </button>
+        </div>
+
+        <div class="tab-content active" data-content="radius">
+            <h2>Border Radius</h2>
+            <div class="control">
+                <label for="top-left">Top Left</label>
+                <input id="top-left" type="range" min="0" max="100" value="0">
+                <span id="top-left-value">0 px</span>
+            </div>
+
+            <div class="control">
+                <label for="top-right">Top Right</label>
+                <input id="top-right" type="range" min="0" max="100" value="0">
+                <span id="top-right-value">0 px</span>
+            </div>
+
+            <div class="control">
+                <label for="bottom-right">Bottom Right</label>
+                <input id="bottom-right" type="range" min="0" max="100" value="0">
+                <span id="bottom-right-value">0 px</span>
+            </div>
+
+            <div class="control">
+                <label for="bottom-left">Bottom Left</label>
+                <input id="bottom-left" type="range" min="0" max="100" value="0">
+                <span id="bottom-left-value">0 px</span>
+            </div>
+        </div>
+
+        <div class="tab-content" data-content="property-2">
+            <h2>Margin</h2>
+            <div id="property-2-controls"></div>
+        </div>
+
+        <div class="tab-content" data-content="property-3">
+            <h2>Text-align</h2>
+            <div id="property-3-controls"></div>
+        </div>
+
+        <section class="preview-section">
+            <h2>Preview</h2>
+            <div id="preview" class="preview">
+                <span>Preview</span>
+                <button id="preview-button" type="button">Click</button>
+            </div>
+            <p id="coordinates">
+                X: 0; Y: 0
+            </p>
+        </section>
+
+        <section class="result">
+            <h2>CSS Code</h2>
+            <textarea id="css-code" rows="6" readonly></textarea>
+            <button id="copy-button" type="button">Скопіювати CSS</button>
+            <p id="copy-message"></p>
+        </section>
+
+        <form id="preset-form">
+            <h2>Збереження пресета</h2>
+            <label for="preset-name">Назва пресета</label>
+            <input id="preset-name" type="text">
+            <span id="preset-error"></span>
+            <button type="submit">Зберегти</button>
+        </form>
+    </main>
+
+    <button id="scroll-top" type="button" aria-label="Повернутися вгору">↑</button>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
