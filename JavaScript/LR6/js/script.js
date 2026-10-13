@@ -108,6 +108,14 @@ function generateCSS() {
     const textAlign = textAlignSelect.value;
     preview.style.textAlign = textAlign;
 
+    if (textAlign === 'left') {
+        preview.style.alignItems = 'flex-start';
+    } else if (textAlign === 'center') {
+        preview.style.alignItems = 'center';
+    } else if (textAlign === 'right') {
+        preview.style.alignItems = 'flex-end';
+    }
+
     // Генерація результуючого CSS-коду
     cssCode.value = `border-radius: ${radius};\nmargin: ${margin}px;\ntext-align: ${textAlign};`;
 }
@@ -210,7 +218,7 @@ previewButton.addEventListener('click', function (event) {
 });
 
 
-// ФункціяScroll миші
+// Функція Scroll миші
 function handleScroll() {
     if (window.scrollY > 300) {
         scrollTopButton.classList.add('visible');
