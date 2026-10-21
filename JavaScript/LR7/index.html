@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h2>Керування</h2>
+
+            <div class="button-row">
+                <button type="button" id="getLocation">Визначити місце</button>
+                <button type="button" id="watch">Почати відстеження</button>
+                <button type="button" id="clearWatch" disabled>Зупинити відстеження</button>
+                <button type="button" id="centerMyLocation">До мене</button>
+            </div>
+
+            <p id="trackingStatus">Відстеження вимкнено</p>
+            <p id="message">Очікування визначення місцезнаходження...</p>
+        </section>
+
+        <section class="card">
+            <h2>Ваші координати</h2>
+
+            <div class="coordinate-grid">
+                <div class="data-item">
+                    <span class="data-label">Широта</span>
+                    <strong id="latitude" class="data-value">—</strong>
+                </div>
+
+                <div class="data-item">
+                    <span class="data-label">Довгота</span>
+                    <strong id="longitude" class="data-value">—</strong>
+                </div>
+
+                <div class="data-item">
+                    <span class="data-label">Точність</span>
+                    <strong id="accuracy" class="data-value">—</strong>
+                </div>
+
+                <div class="data-item">
+                    <span class="data-label">Час</span>
+                    <strong id="measuredAt" class="data-value">—</strong>
+                </div>
+            </div>
+
+            <div class="distance-box">
+                <span class="data-label">Відстань до коледжу</span>
+                <strong id="distance" class="distance-value">—</strong>
+            </div>
+
+            <p class="college-coords">Коледж: 48.94321° N, 24.73380° E</p>
+        </section>
+
+        <section class="card">
+            <h2>Карта</h2>
+            <div id="map"></div>
+        </section>
+
+        <section class="card">
+            <h2>Пункт призначення</h2>
+
+            <form id="destinationForm" class="destination-form">
+                <input type="text" id="destinationLat" placeholder="Широта, наприклад 50.4501" required>
+                <input type="text" id="destinationLon" placeholder="Довгота, наприклад 30.5234" required>
+                <button type="submit">Показати на карті</button>
+            </form>
+
+            <p id="destinationMessage"></p>
+        </section>
+    </main>
+</body>
+</html>
