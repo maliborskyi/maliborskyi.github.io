@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-wrapper {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", arial, sans-serif;
+}
+
+.todo-container {
+    width: 420px;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #777777;
+    box-sizing: border-box;
+    color: #666666;
+}
+
+#taskInput::placeholder {
+    color: #888888;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333333;
+}
+
+#filterSelect {
+    padding: 4px;
+    font-size: 14px;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    margin-bottom: -1px; 
+    background: #fff;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.task-text {
+    font-size: 16px;
+    color: #000000;
+}
+
+.task-date {
+    font-size: 11px;
+    color: #888888;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+/* Виконане завдання */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #808080;
+}
+
+.completed .task-checkbox {
+    display: none;
+}
+
+/* Хрестик для видалення праворуч */
+.delete-btn {
+    background: none;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Стиль для інпуту при редагуванні */
+.edit-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #333333;
+}
