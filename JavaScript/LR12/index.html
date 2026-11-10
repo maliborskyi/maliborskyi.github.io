@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ЛР №12</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Каталог товарів</h1>
+      <p id="count" class="count" aria-live="polite">Знайдено товарів: —</p>
+      <p id="status" class="status" role="status" aria-live="polite">Підключення до Supabase...</p>
+    </header>
+
+    <section aria-labelledby="list-title">
+      <div class="section-title">
+        <h2 id="list-title">Список товарів</h2>
+        <button id="refresh-btn" class="button button-secondary" type="button">Оновити</button>
+      </div>
+
+      <div class="filters">
+        <div class="field search-field">
+          <label for="search">Пошук за назвою або брендом</label>
+          <input type="search" id="search" placeholder="Наприклад, сукня" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="filter-category">Категорія</label>
+          <select id="filter-category">
+            <option value="all">Усі категорії</option>
+            <option value="Одяг">Одяг</option>
+            <option value="Взуття">Взуття</option>
+            <option value="Аксесуари">Аксесуари</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="sort">Сортування</label>
+          <select id="sort">
+            <option value="newest">Спочатку нові</option>
+            <option value="title">За назвою (А–Я)</option>
+            <option value="price_asc">За ціною (↑)</option>
+            <option value="price_desc">За ціною (↓)</option>
+          </select>
+        </div>
+      </div>
+
+      <ul id="products-list" class="products-list" aria-label="Товари з бази даних"></ul>
+      <p id="empty-message" class="empty-message" hidden>У каталозі поки немає товарів.</p>
+    </section>
+
+    <section class="add-section" aria-labelledby="add-title">
+      <h2 id="add-title">Додати товар</h2>
+      <form id="product-form">
+        <div class="field">
+          <label for="product-title">Назва товару <span class="required">*</span></label>
+          <input id="product-title" name="title" type="text" minlength="2" maxlength="120" required
+            placeholder="Наприклад, Сукня міді">
+        </div>
+
+        <div class="field">
+          <label for="product-brand">Бренд <span class="required">*</span></label>
+          <input id="product-brand" name="brand" type="text" minlength="2" maxlength="80" required
+            placeholder="Наприклад, Nike">
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="product-category">Категорія <span class="required">*</span></label>
+            <select id="product-category" name="category" required>
+              <option value="" selected disabled>Оберіть категорію</option>
+              <option value="Одяг">Одяг</option>
+              <option value="Взуття">Взуття</option>
+              <option value="Аксесуари">Аксесуари</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="product-price">Ціна, грн <span class="required">*</span></label>
+            <input id="product-price" name="price" type="number" min="0.01" max="999999.99" step="0.01" required
+              placeholder="1599.00">
+          </div>
+        </div>
+        
+        <button id="submit-btn" class="button button-primary" type="submit">Додати товар</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
