@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР №14</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <section class="catalog-container">
+        <header class="catalog-header">
+            <h1 class="catalog-title" id="catalog-title">ОБОВ'ЯЗКОВО ДОДАЙТЕ СВОЄ ЗАМОВЛЕННЯ</h1>
+
+            <div class="header-actions">
+                <label class="language-control" for="language-selector">
+                    <span data-i18n="selectLanguage">Мова</span>
+                    <select id="language-selector" aria-label="Мова / Language">
+                        <option value="uk">Українська</option>
+                        <option value="en">English</option>
+                    </select>
+                </label>
+
+                <div class="cart-icon-wrapper" id="cart-icon"
+                     role="button" tabindex="0" aria-label="Кошик">
+                    <img src="styles/images/cart.svg" alt=""
+                         class="cart-icon-img" width="28" height="28">
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </div>
+            </div>
+        </header>
+
+        <p id="load-status" class="load-status"
+           role="status" aria-live="polite"></p>
+
+        <div class="product-grid" id="product-container"></div>
+    </section>
+
+    <div class="modal-overlay" id="qty-modal">
+        <div class="modal-content">
+            <h3 data-i18n="quantityTitle">Вкажіть кількість:</h3>
+            <p id="modal-product-title" class="modal-product-title"></p>
+            <input type="number" id="product-qty-input"
+                   value="1" min="1" max="99">
+
+            <div class="modal-buttons">
+                <button class="btn buy" id="confirm-add-btn"
+                        data-i18n="confirmAdd">ДОДАТИ ДО КОРЗИНИ</button>
+                <button class="btn coming-soon" id="cancel-qty-btn"
+                        data-i18n="cancel">СКАСУВАТИ</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content">
+            <h3 data-i18n="addedTitle">Товар додано</h3>
+
+            <div class="modal-buttons modal-buttons-margin">
+                <button class="btn buy" id="goto-cart-modal-btn"
+                        data-i18n="goToCart">ПЕРЕЙТИ У КОРЗИНУ</button>
+                <button class="btn coming-soon" id="continue-shopping-btn"
+                        data-i18n="continueShopping">ПОВЕРНУТИСЬ ДО ПОКУПОК</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="empty-cart-modal">
+        <div class="modal-content">
+            <h3 data-i18n="emptyModalTitle">Корзина пуста</h3>
+
+            <div class="modal-buttons modal-buttons-margin">
+                <button class="btn buy" id="close-empty-modal-btn"
+                        data-i18n="okay">ОК</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay language-modal" id="language-modal"
+         role="dialog" aria-modal="true"
+         aria-labelledby="language-modal-title">
+        <div class="modal-content">
+            <h3 id="language-modal-title">Оберіть мову / Choose language</h3>
+            <p class="language-hint">
+                Виберіть мову перегляду / Select your language
+            </p>
+
+            <div class="modal-buttons">
+                <button class="btn buy language-choice"
+                        type="button" data-language="uk">Українська</button>
+                <button class="btn coming-soon language-choice"
+                        type="button" data-language="en">English</button>
+            </div>
+
+            <p id="language-error" class="load-status" role="alert"></p>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+{
+  "title": "ОБОВ'ЯЗКОВО ДОДАЙТЕ СВОЄ ЗАМОВЛЕННЯ",
+  "products": [
+    {
+      "id": 1,
+      "name": "Моторна олива Motul 5W-30",
+      "category": "ТЕХНІЧНІ РІДИНИ",
+      "price": 2751,
+      "oldPrice": 2999,
+      "description": "Синтетична моторна олива для технічного обслуговування автомобіля.",
+      "image": "https://images2.exist.ua/media/images/products/2025/11/2025-24-11_08-30-31_17340867.jpg",
+      "badge": "НОВИНКА",
+      "badgeType": "new",
+      "nameEn": "Motul 5W-30 Motor Oil",
+      "categoryEn": "TECHNICAL FLUIDS",
+      "descriptionEn": "Synthetic motor oil for vehicle maintenance."
+    },
+    {
+      "id": 2,
+      "name": "Фільтр масляний MANN-FILTER",
+      "category": "ФІЛЬТРИ",
+      "price": 261,
+      "description": "Масляний фільтр для очищення моторної оливи.",
+      "image": "https://images2.exist.ua/media/images/products/2026/02/2026-09-02_16-04-27_19608512.jpg",
+      "nameEn": "MANN-FILTER Oil Filter",
+      "categoryEn": "FILTERS",
+      "descriptionEn": "Oil filter for cleaning motor oil."
+    },
+    {
+      "id": 3,
+      "name": "Колодки гальмівні Brembo",
+      "category": "ГАЛЬМІВНА СИСТЕМА",
+      "price": 597,
+      "description": "Гальмівні колодки для системи гальмування автомобіля.",
+      "image": "https://images2.exist.ua/media/images/products/2022/05/2022-25-05_17-00-28_13313238.jpg",
+      "badge": "ХІТ ПРОДАЖІВ",
+      "badgeType": "hit",
+      "nameEn": "Brembo Brake Pads",
+      "categoryEn": "BRAKING SYSTEM",
+      "descriptionEn": "Brake pads for a vehicle braking system."
+    },
+    {
+      "id": 4,
+      "name": "Свічка запалювання NGK Iridium",
+      "category": "ЕЛЕКТРИКА",
+      "price": 483,
+      "description": "Іридієва свічка запалювання для бензинового двигуна.",
+      "image": "https://images2.exist.ua/media/images/products/2020/12/45__z6EoMLU.jpg",
+      "badge": "ХІТ ПРОДАЖІВ",
+      "badgeType": "hit",
+      "nameEn": "NGK Iridium Spark Plug",
+      "categoryEn": "ELECTRICAL",
+      "descriptionEn": "Iridium spark plug for a gasoline engine."
+    },
+    {
+      "id": 5,
+      "name": "Щітки склоочисника Bosch Aerotwin",
+      "category": "СКЛООЧИСНИКИ",
+      "price": 689,
+      "description": "Комплект щіток для очищення лобового скла від води та бруду.",
+      "image": "https://www.powerbulbs.com/cdn/shop/files/3397009016_1.jpg?v=1773755430&width=1445",
+      "nameEn": "Bosch Aerotwin Wiper Blades",
+      "categoryEn": "WINDSHIELD WIPERS",
+      "descriptionEn": "Set of wiper blades for removing rain and dirt from the windshield."
+    },
+    {
+      "id": 6,
+      "name": "Акумулятор Bosch S4 001",
+      "category": "АКУМУЛЯТОРИ",
+      "price": 3499,
+      "description": "Автомобільний акумулятор 12 В для запуску двигуна та живлення електрообладнання.",
+      "image": "https://cdn.hellweg.digital/media/d1/d4/7e/1758035589/573878_Bosch_Professional_S4-Batterie_KSN_S4_010_0092S40100_01.jpg.jpg?ts=1776293985",
+      "badge": "НОВИНКА",
+      "badgeType": "new",
+      "nameEn": "Bosch S4 001 Car Battery",
+      "categoryEn": "CAR BATTERIES",
+      "descriptionEn": "12 V car battery for engine starting and vehicle electrical systems."
+    }
+  ],
+  "titleEn": "MAKE SURE TO PLACE YOUR ORDER"
+}
